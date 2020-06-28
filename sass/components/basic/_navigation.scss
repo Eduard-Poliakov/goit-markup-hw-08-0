@@ -1,0 +1,67 @@
+/* Навигация*/
+
+.link {
+  display: flex;
+  position: relative;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: $p_color;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.link:focus,
+.link:hover,
+.link-current {
+  color: $a_color;
+  fill: $a_color;
+}
+
+.navig .link-current::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background-color: $a_color;
+  border-radius: 2px;
+}
+
+.link-contact {
+  color: $s_color;
+  fill: $s_color;
+  display: flex;
+  align-items: center;
+
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navig {
+  display: flex;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.navig .style + .style {
+  margin-left: 50px;
+}
+
+.contact {
+  margin-left: auto;
+
+  .icon {
+    margin-right: 10px;
+    overflow: visible;
+  }
+}
+
+.style-header {
+  display: flex;
+  align-items: center;
+}

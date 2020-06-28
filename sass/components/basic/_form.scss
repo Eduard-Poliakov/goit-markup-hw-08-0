@@ -1,0 +1,217 @@
+/* Форма */
+
+.subscription {
+  position: relative;
+  width: 528px;
+  height: 581px;
+  background: #ffffff;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  padding: 40px;
+  margin-left: auto;
+  margin-right: auto;
+
+  p {
+    margin-bottom: 30px;
+    margin-top: 0;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+  }
+}
+
+.field {
+  position: relative;
+  height: 40px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.field-entry {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 40px;
+  padding-right: 16px;
+  margin: 0;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+
+  &:focus {
+    border: 1px solid $a_color;
+    outline: none;
+  }
+}
+
+.field-text {
+  position: absolute;
+  top: 50%;
+  left: 42px;
+  transform: translateY(-50%);
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  color: $s_color;
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.field-style {
+  width: 448px;
+  height: 120px;
+  margin-bottom: 20px;
+}
+
+form textarea {
+  resize: none;
+  left: 16px;
+  height: 100%;
+  width: 100%;
+}
+
+.field-entry:focus ~ .field-icon,
+.field-entry:not(:placeholder-shown) + .field-icon {
+  fill: $a_color;
+}
+
+.field-entry:focus + .field-text,
+.field-entry:not(:placeholder-shown) + .field-text {
+  transform: translate(-26px, -40px);
+  color: $a_color;
+}
+
+.field-icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  height: 18px;
+  width: 18px;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.conditions {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: $s_color;
+
+  a {
+    text-decoration: underline;
+    color: $a_color;
+  }
+}
+
+form button {
+  display: block;
+  margin-top: 30px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.close {
+  position: absolute;
+  top: 8px;
+  left: 490px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  margin: 0;
+  padding: 6px;
+  box-shadow: none;
+  background-color: $p_b_color;
+
+  &:focus,
+  &:hover {
+    fill: $a_color;
+  }
+}
+
+.close-icon {
+  height: 100%;
+  width: 100%;
+  color: #000000;
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-check {
+  content: " ";
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  border: 2px solid $p_color;
+  border-radius: 2px;
+  margin-right: 8px;
+  transition-property: background-color, border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.check-box input[type="checkbox"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0px;
+  border: 0px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.check-box input[type="checkbox"]:checked + .icon-check {
+  background-color: $a_color;
+  background-image: url(..//images/icon-check.svg);
+  background-size: contain;
+  background-origin: border-box;
+  border-color: $a_color;
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdrop {
+  transition-property: opacity;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.background.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.8);
+}
+
+.modal {
+  position: absolute;
+  width: 528px;
+  height: 581px;
+  background-color: $p_b_color;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  border-radius: 4px;
+  /* transition-delay: 2500ms;
+  transition-property: transform;
+  transition-duration: 2500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
+}

@@ -1,0 +1,66 @@
+.footer-logo {
+  color: #ffffff;
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.18;
+  text-transform: capitalize;
+  display: block;
+  margin-bottom: 10px;
+
+  span {
+    color: $a_color;
+  }
+}
+
+.contacts-style {
+  width: 321px;
+}
+
+.address {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+
+  ul {
+    padding-left: 0;
+  }
+}
+
+address li {
+  padding-bottom: 9px;
+
+  &:last-child {
+    padding-bottom: 28px;
+  }
+}
+
+.mail {
+  color: rgba(255, 255, 255, 0.6);
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: $a_color;
+  }
+}
+
+.tel {
+  color: rgba(255, 255, 255, 0.6);
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: $a_color;
+  }
+}
