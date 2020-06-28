@@ -2,7 +2,6 @@ body {
   color: $p_color;
   background-color: $p_b_color;
   font-family: roboto, sans-serif;
-  letter-spacing: 0.03em;
 }
 
 a {
@@ -17,23 +16,26 @@ ul {
   list-style-type: none;
 }
 
-h2 {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-}
-
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
+// h2 {
+//   font-weight: 700;
+//   font-size: 36px;
+//   line-height: 1.17;
+//   text-align: center;
+// }
 
 img {
   display: block;
   width: 100%;
   height: auto;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
 }
