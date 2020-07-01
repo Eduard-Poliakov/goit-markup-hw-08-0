@@ -1,12 +1,17 @@
 .portfolio .choice {
   display: flex;
-  justify-content: center;
-  padding-left: 0;
+  flex-wrap: wrap;
+  justify-content: left;
+  margin: -8px -4px;
   margin-bottom: 50px;
 
-  li + li {
-    margin-left: 8px;
+  > li {
+    margin: 8px 4px;
   }
+
+  // li + li {
+  //   margin-left: 8px;
+  // }
 }
 
 .choice-button {

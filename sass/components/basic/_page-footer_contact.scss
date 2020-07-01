@@ -6,7 +6,7 @@
   line-height: 1.18;
   text-transform: capitalize;
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 
   span {
     color: $a_color;
@@ -14,7 +14,7 @@
 }
 
 .contacts-style {
-  width: 321px;
+  margin-bottom: 60px;
 }
 
 .address {
@@ -28,11 +28,11 @@
 }
 
 address li {
-  padding-bottom: 9px;
+  padding-bottom: 8px;
 
-  &:last-child {
-    padding-bottom: 28px;
-  }
+  // &:last-child {
+  //   padding-bottom: 60px;
+  // }
 }
 
 .mail {

@@ -1,19 +1,23 @@
 .form-style {
-  width: 570px;
+  // width: 570px;
 
   input {
+    // width: 270px;
+    width: 100%;
+    height: 50px;
+
     background-color: #2f303a;
     color: #ffffff;
-    width: 270px;
-    height: 50px;
+
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     padding-left: 10px;
+    margin-bottom: 20px;
   }
 
   b {
-    margin-bottom: 21px;
+    margin-bottom: 20px;
 
     font-weight: 700;
     font-size: 14px;
@@ -24,24 +28,9 @@
 }
 
 .button-footer {
-  color: #ffffff;
-  background-color: $a_color;
-  font-weight: 900;
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.06em;
-  border: 4px solid $a_color;
-  border-radius: 4px;
-  padding: 6px 4px;
-  min-width: 200px;
-  margin-left: 12px;
+  // margin-left: 12px;
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-
-  svg {
-    margin-left: 10px;
-  }
 }
 
 .button-footer::after {

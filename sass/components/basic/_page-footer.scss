@@ -1,13 +1,18 @@
 /* Подвал */
 
 footer.footer {
-  padding-top: 48px;
-  padding-bottom: 28px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  text-align: center;
 
   color: $p_b_color;
   background-color: #2f303a;
 
   p {
+    @media screen and (max-width: 1599px) {
+      display: none;
+    }
+
     display: block;
     margin: 0;
     padding-top: 18px;
@@ -20,7 +25,7 @@ footer.footer {
   }
 }
 
-.footer-style {
-  display: flex;
-  align-items: top;
-}
+// .footer-style {
+//   display: flex;
+//   align-items: top;
+// }

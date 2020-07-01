@@ -1,19 +1,19 @@
 /* Особенности */
 
 section.features {
-  padding-top: 94px;
+  padding-top: 60px;
   background-color: $p_b_color;
 
-  ul {
-    display: flex;
-  }
+  // ul {
+  //   display: flex;
+  // }
 
   li {
-    width: calc((100% - 30px * 3) / 4);
+    width: 100%;
   }
 
   li + li {
-    margin-left: 30px;
+    margin-top: 30px;
   }
 
   h2 {
@@ -24,6 +24,7 @@ section.features {
   h3 {
     margin-top: 0;
     margin-bottom: 10px;
+    text-align: center;
 
     font-weight: 700;
     font-size: 14px;
@@ -39,15 +40,15 @@ section.features {
     line-height: 1.71;
   }
 
-  a {
-    display: block;
-    width: 270px;
-    height: 120px;
+  // a {
+  //   display: block;
+  //   width: 270px;
+  //   height: 120px;
 
-    margin-bottom: 30px;
+  //   margin-bottom: 30px;
 
-    background-color: #f5f4fa;
-  }
+  //   background-color: #f5f4fa;
+  // }
 
   div.background {
     display: flex;
@@ -60,10 +61,10 @@ section.features {
 
     background: #f5f4fa;
     border-radius: 4px;
-  }
-}
 
-.background .icon {
-  width: 70px;
-  height: 70px;
+    .icon {
+      width: 70px;
+      height: 70px;
+    }
+  }
 }
