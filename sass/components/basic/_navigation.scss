@@ -1,29 +1,44 @@
 /* Навигация*/
 
 .style-header {
-  position: relative;
   display: flex;
   align-items: center;
-  height: 60px;
   border-bottom: 1px solid #ececec;
+
+  @media screen and (max-width: 767px) {
+    position: relative;
+    height: 60px;
+  }
+
+  @media screen and (min-width: 768px) {
+    position: static;
+    height: 80px;
+  }
 }
 
 .mob-menu {
-  position: absolute;
-  z-index: 999;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  display: none;
+  @media screen and (max-width: 767px) {
+    position: absolute;
+    z-index: 999;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    display: none;
 
-  text-align: center;
+    text-align: center;
 
-  background: $p-b-color;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.08),
-    0px 4px 8px rgba(0, 0, 0, 0.04);
+    background: $p-b-color;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.08),
+      0px 4px 8px rgba(0, 0, 0, 0.04);
 
-  &.is-open {
-    display: block;
+    &.is-open {
+      display: block;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    position: static;
   }
 }
 
@@ -50,58 +65,91 @@
   &:focus {
     fill: $a_color;
   }
+
+  @media screen and (min-width: 767px) {
+    display: none;
+  }
 }
 
 .icon-mob-close {
   display: none;
 }
 
-nav .navig {
-  // display: flex;
+@media screen and (min-width: 768px) {
+  .navig {
+    display: flex;
 
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+  }
+}
+
+nav .navig {
   font-weight: 500;
-  font-size: 18px;
-  line-height: 1.66;
   letter-spacing: 0.02em;
 
-  padding-top: 30px;
-  padding-bottom: 30px;
-  margin-top: 30px;
+  @media screen and (max-width: 767px) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-top: 30px;
+    font-size: 18px;
+    line-height: 1.66;
 
-  a {
-    position: relative;
-    display: inline-block;
+    a {
+      position: relative;
+      display: inline-block;
+    }
+
+    li + li {
+      margin-top: 40px;
+    }
   }
 
-  li + li {
-    margin-top: 40px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    font-size: 14px;
+    line-height: 1.14;
   }
 }
 
 .navig .link-current::after {
   content: "";
   position: absolute;
-  top: calc(100% + 4px);
-  left: 0;
   width: 100%;
   height: 4px;
   background-color: $a_color;
   border-radius: 2px;
+
+  @media screen and (max-width: 767px) {
+    top: calc(100% + 4px);
+    left: 0;
+  }
+
+  @media screen and (min-width: 768px) {
+    bottom: 0;
+  }
 }
 
-// .navig .style + .style {
-//   margin-left: 50px;
-// }
+@media screen and (min-width: 1600px) {
+  .navig .style + .style {
+    margin-left: 50px;
+  }
+}
 
 .link {
-  // display: flex;
-  // position: relative;
-  // padding-top: 32px;
-  // padding-bottom: 32px;
   color: $p_color;
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    position: relative;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 
   &:focus,
   &:hover,
@@ -112,20 +160,54 @@ nav .navig {
 }
 
 .contact {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  margin-bottom: 30px;
-}
+  & > li {
+    display: block;
+  }
 
-.contact li {
-  display: block;
-}
+  @media scrieen and (max-width: 767px) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
 
-.contact li + li {
-  margin-top: 16px;
+    & > li + li {
+      margin-top: 16px;
+    }
+  }
+
+  @media scrieen and (min-width: 768px) and (max-width: 1599px) {
+    margin: 130px;
+  }
 }
 
 .link-contact {
   color: $s_color;
   fill: $s_color;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    padding: 0;
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.icon {
+  margin-right: 10px;
+  overflow: visible;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1599px) {
+  .tab-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 21px;
+    padding-bottom: 21px;
+
+    & li + li {
+      margin-top: 10px;
+    }
+  }
 }
